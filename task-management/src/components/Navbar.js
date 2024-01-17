@@ -2,7 +2,7 @@ import React from 'react'
 
 const Navbar = () => {
     return (
-        <div className='w-full h-16 bg-blue-600 text-white flex flex-row  sticky top-0'>
+        <div className='w-full h-16 bg-blue-600 text-white flex flex-row z-10  sticky top-0'>
             <div className='w-1/4 items-center flex justify-center'>
                 <h1 className='text-3xl'>Task Management</h1>
             </div>
