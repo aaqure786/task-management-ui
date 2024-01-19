@@ -3,6 +3,9 @@ import Home from './components/Home';
 import {  Route, Routes } from 'react-router-dom'
 import Login from './components/Login';
 import Index from './components/dashboard/Index';
+import Tasks from './components/dashboard/Tasks';
+import AddorEditTasks from './components/dashboard/AddorEditTasks';
+import AllTasks from './components/dashboard/AllTasks';
 function App() {
   return (
     <div className="App">
@@ -14,7 +17,12 @@ function App() {
 
           <Route path='/login' element={<Login />} />
           <Route path='/dashboard' element={<Index />} >
+          <Route path='tasks' element={<Tasks />} />
+          <Route path='addtask' element={<AddorEditTasks />} />
+          <Route path='alltasks' element={<AllTasks />} />
 
+          
+            
           </Route>
 
 

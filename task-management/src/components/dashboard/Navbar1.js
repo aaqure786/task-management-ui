@@ -21,15 +21,15 @@ const Navbar1 = () => {
     return (
         <div>
 
-            <div className='flex w-full h-[50px] mt-2   bg-gray-100 z-10 border-b-2 border-gray-400    justify-between '>
-                <div className='w-[70%] md:w-[25%] md:border-r-2 md:border-gray-400 flex items-center '>
-                    <motion.div initial={{ x: 50 }} animate={{ x: 0 }} transition={{ duration: 1 }} className='flex '>
+            <div className='flex w-full h-[10vh]    bg-gray-100 z-10     justify-between '>
+                <div className='w-[70%] md:w-[23.5%]  flex items-center '>
+                    <motion.div initial={{ x: 50 }} animate={{ x: 0 }} transition={{ duration: 1 }} className='flex w-full bg-gray-300'>
                         <img  src={pic} alt='courier' className='m-2 h-10' />
-                        <h1 className='text-3xl mt-4 font-semibold'> Courier Services</h1>
+                        <h1 className='text-2xl mt-2 font-semibold'> Task Management</h1>
                     </motion.div>
 
                 </div>
-                <div className='w-[30%] md:w-[40%] hidden md:flex items-center '>
+                <div className='w-[30%] md:w-[66.5%] hidden md:flex items-center '>
                     <h1 className='text-2xl mx-5 font-bold '>Dashboard</h1>
                 </div>
 
@@ -40,8 +40,8 @@ const Navbar1 = () => {
 
 
                 </div>
-                <div className='w-[30%]  justify-center relative items-center rounded-r-2xl hidden md:flex lg:flex'>
-                    <div className='flex ml-10'>
+                <div className='w-[20%]  relative items-center rounded-r-2xl hidden md:flex lg:flex'>
+                    <div className='flex justify-between w-full ml-10'>
                         <h1 > <RiAccountBoxFill size={30} /> </h1>
 
                         <h1 className='text-lg md:text-2xl mx-3  '>Demo</h1>
@@ -50,10 +50,7 @@ const Navbar1 = () => {
                     </div>
                     {cliked &&
                         <div className='w-full h-[150px] absolute top-20 z-10 right-10 bg-gray-100 justify-center rounded-3xl flex items-start  flex-col'>
-                            <div className='flex'>
-                                <AiOutlineSetting size={20} className='mx-5 mt-1' />
-                                <h1 className='text-xl font-semibold'>Manage Account</h1>
-                            </div>
+                            
                             <button onClick={handleLogout} className='flex mt-2 '>
                                 <BiLogOut size={20} className='mx-5 mt-1' />
                                 <h1 className='text-xl font-semibold'>Logout</h1>
