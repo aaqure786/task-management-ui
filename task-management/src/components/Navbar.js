@@ -17,7 +17,7 @@ const Navbar = () => {
             </div>
             <div className='w-1/4 bg-blue-700 flex items-center justify-center '>
             <Link to={"/login"}  className='bg-white mx-5 text-black text-center border rounded-lg px-4 py-1'>Login</Link>
-            <Link to={"/"} className='bg-white mx-5 text-black text-center border rounded-lg px-4 py-1'>Signup</Link>
+            <Link to={"/signup"} className='bg-white mx-5 text-black text-center border rounded-lg px-4 py-1'>Signup</Link>
 
             </div>
 

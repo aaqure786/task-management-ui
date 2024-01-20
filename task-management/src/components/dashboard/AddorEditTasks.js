@@ -65,7 +65,7 @@ const AddorEditTasks = () => {
           theme="dark"
         /> */}
         <div className=' w-full min-h-[70vh] flex flex-col justify-center items-center mt-5  '>
-          <div className='flex flex-col h-[500px] justify-start py-10  w-[90%] rounded-3xl shadow-2xl shadow-gray-400  bg-slate-100 '>
+          <div className='flex flex-col h-[500px] justify-start py-10  w-[90%] rounded-xl shadow-2xl shadow-gray-400  bg-slate-100 '>
             <h1 className='text-start mx-[5%]  text-3xl font-semibold  '>Task Details</h1>
             <form className='flex flex-col text-start'>
               <div className='grid grid-cols-1 mt-5  '>
