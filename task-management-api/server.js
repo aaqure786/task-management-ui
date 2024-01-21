@@ -5,7 +5,7 @@ const cors = require("cors")
 
 const userRoutes = require("./routers/adminRoutes")
 const taskRoutes = require("./routers/taskRoutes")
-
+const permissionRoutes = require("./routers/permissionRoutes")
 dotenv.config();
 
 const app = express();
@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 app.use('/api/user/',userRoutes)
 app.use('/api/task/',taskRoutes)
-
+app.use('/api/perm/',permissionRoutes)
 mongoose.connect(process.env.DB)
 .then(()=>{
     console.log("DB Connection Successful")
