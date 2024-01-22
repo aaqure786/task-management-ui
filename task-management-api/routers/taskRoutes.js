@@ -34,7 +34,7 @@ router.get('/gettasks', fetchUser, async (req, res) => {
 
 // Routes to fetch single task
 
-router.get('/gettask', fetchUser, async (req, res) => {
+router.get('/gettasks', fetchUser, async (req, res) => {
     try {
         const task = await Task.findById({ _id: req.params.id })
         if (task) {

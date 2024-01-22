@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom'
 
 
 
-const Sidebar = () => {
+const Sidebar = ({user}) => {
   const [tasks, setTasks] = useState(false)
   // const [roles, setRoles] = useState(false)
   return (
@@ -43,6 +43,7 @@ const Sidebar = () => {
         </>
         
       }
+      {user.role === "Admin" ?
       <div className='flex mx-1 px-2 mt-2 py-1 border-b-[2px]  border-gray-600 active:border-white  justify-start'>
         <Link to={"roles"} className='flex '>
           <MdOutlineManageAccounts size={30} style={{ color: "white" }} />
@@ -52,6 +53,7 @@ const Sidebar = () => {
            <BiChevronDown onClick={() => { setRoles(!roles) }} /> 
            </motion.h1> */}
       </div>
+      : '' }
       {/* {roles && 
         <>
         <Link to={'alltasks'} className='flex w-[90%] ml-5 px-2 mt-2 py-1 border-b-[2px]  border-gray-200 justify-start'>

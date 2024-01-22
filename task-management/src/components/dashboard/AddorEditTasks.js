@@ -1,4 +1,5 @@
 import {React, useState } from 'react'
+import { useParams } from 'react-router-dom'
 // import { useNavigate } from 'react-router-dom';
 // import { ToastContainer } from "react-toastify"
 // import 'react-toastify/dist/ReactToastify.css';
@@ -10,6 +11,8 @@ const AddorEditTasks = () => {
   const hadlechange = (e) => {
     setTask({...task, [e.target.name]: e.target.value} )
   }
+  const parms = useParams()
+  const id = parms.id
   const hadleClick = async (e) => {
     e.preventDefault()
     // console.log(task)
@@ -66,7 +69,7 @@ const AddorEditTasks = () => {
         /> */}
         <div className=' w-full min-h-[70vh] flex flex-col justify-center items-center mt-5  '>
           <div className='flex flex-col h-[500px] justify-start py-10  w-[90%] rounded-xl shadow-2xl shadow-gray-400  bg-slate-100 '>
-            <h1 className='text-start mx-[5%]  text-3xl font-semibold  '>Task Details</h1>
+            <h1 className='text-start mx-[5%]  text-3xl font-semibold  '>{id ? 'Edit': 'Add'}Task Details</h1>
             <form className='flex flex-col text-start'>
               <div className='grid grid-cols-1 mt-5  '>
                 <div className=' flex flex-col'>

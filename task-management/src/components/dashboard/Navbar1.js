@@ -8,7 +8,7 @@ import { BiChevronDown, BiLogOut } from "react-icons/bi"
 import {  useNavigate } from 'react-router-dom'
 
 
-const Navbar1 = () => {
+const Navbar1 = (props) => {
 
     const navigate = useNavigate()
     const handleLogout = () => {
@@ -41,10 +41,10 @@ const Navbar1 = () => {
 
                 </div>
                 <div className='w-[20%]  relative items-center rounded-r-2xl hidden md:flex lg:flex'>
-                    <div className='flex justify-between w-full ml-10'>
+                    <div className='flex justify-between w-full ml-10 mr-3'>
                         <h1 > <RiAccountBoxFill size={30} /> </h1>
 
-                        <h1 className='text-lg md:text-2xl mx-3  '>Demo</h1>
+                        <h1 className='text-lg md:text-2xl mx-3  '>{props.user.name}</h1>
                         <motion.h1 animate={cliked ? { rotate: 180 } : { rotate: 0 }} className='text-xl md:text-3xl mt-1 cursor-pointer '> <BiChevronDown onClick={() => { setCliked(!cliked) }} /> </motion.h1>
 
                     </div>

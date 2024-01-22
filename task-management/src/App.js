@@ -24,6 +24,8 @@ function App() {
           <Route path='roles' element={<Roles />} />
 
           <Route path='addtask' element={<AddorEditTasks />} />
+          <Route path='/dashboard/edittask/:id' element={<AddorEditTasks />} />
+
           <Route path='alltasks' element={<AllTasks />} />
 
           
