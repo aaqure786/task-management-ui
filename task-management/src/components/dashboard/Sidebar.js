@@ -32,11 +32,11 @@ const Sidebar = ({user}) => {
       </div>
       {tasks && 
         <>
-        <Link to={'alltasks'} className='flex w-[90%] ml-5 px-2 mt-2 py-1 border-b-[2px]  border-gray-200 justify-start'>
+        <Link to={'/dashboard/tasks/alltasks'} className='flex w-[90%] ml-5 px-2 mt-2 py-1 border-b-[2px]  border-gray-200 justify-start'>
           
           <h1 className='text-white mt-1 mx-2 text-xl md:text-xl'>All Tasks</h1>
         </Link>
-        <Link to={'addtask'} className='flex w-[90%] ml-5 px-2 mt-2 py-1 border-b-[2px]  border-gray-200 justify-start'>
+        <Link to={'/dashboard/tasks/addtask'} className='flex w-[90%] ml-5 px-2 mt-2 py-1 border-b-[2px]  border-gray-200 justify-start'>
           
           <h1 className='text-white mt-1 mx-2 text-xl md:text-xl'>Add Task</h1>
         </Link>

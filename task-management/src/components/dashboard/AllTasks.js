@@ -52,7 +52,7 @@ const AllTasks = () => {
                                         <td className="px-1 py-3">{value.description}</td>
                                         <td className="px-1 py-3">{value.status}</td>
                                         <td className="w-10 flex ">
-                                            <Link to={`edittask/${value._id}`} className='   mx-1 bg-green-500 rounded-xl'><GrFormView size={30} className='mx-2 mt-1 ' /></Link>
+                                            <Link to={`/dashboard/tasks/edittask/${value._id}`} className='   mx-1 bg-green-500 rounded-xl'><GrFormView size={30} className='mx-2 mt-1 ' /></Link>
                                             {/* <Link to={`${}`} className=' w-[50px] bg-blue-500 flex mx-1  rounded-xl px-2 text-2xl py-1'><AiOutlineEdit size={30} /></Link> */}
 
 

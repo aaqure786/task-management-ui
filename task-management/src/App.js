@@ -20,13 +20,17 @@ function App() {
 
           <Route path='/login' element={<Login />} />
           <Route path='/dashboard' element={<Index />} >
-          <Route path='tasks' element={<Tasks />} />
+          <Route path='tasks' element={<Tasks/>} >
+          <Route path='' element={<AllTasks />} />
+            
+          <Route path='/dashboard/tasks/addtask' element={<AddorEditTasks />} />
+          <Route path='/dashboard/tasks/alltasks' element={<AllTasks />} />
+          <Route path='/dashboard/tasks/edittask/:id' element={<AddorEditTasks />} />
+
+          </Route>
           <Route path='roles' element={<Roles />} />
 
-          <Route path='addtask' element={<AddorEditTasks />} />
-          <Route path='/dashboard/edittask/:id' element={<AddorEditTasks />} />
 
-          <Route path='alltasks' element={<AllTasks />} />
 
           
             
