@@ -9,7 +9,7 @@ const JWT_SEC ="JWT12354"
 //route to add User user
 router.post("/adduser", async (req,res)=>{
     try {
-        const user =await User .create({
+        const user =await User.create({
             name:req.body.name,
             role:req.body.role,
             email:req.body.email,

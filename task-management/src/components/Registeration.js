@@ -1,5 +1,8 @@
-import React, { useState } from 'react'
-
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 const Registeration = () => {
     const [register, setRegister] = useState({ name: "", role: "", email: "", password: "" })
     const [cpassword, setCpassword] = useState('')
@@ -8,7 +11,8 @@ const Registeration = () => {
         setRegister({ ...register, [e.target.name]: e.target.value })
 
     }
-    const handleClick = (e) => {
+    const navigate = useNavigate()
+    const handleClick = async (e) => {
 
         e.preventDefault()
         if (register.password !== cpassword) {
@@ -16,13 +20,47 @@ const Registeration = () => {
         } else {
             setErr(false)
             console.log(register)
-            setRegister({ name: "", role: "", email: "", password: "" })
-            setCpassword("")
+            const result = await fetch(`${BASE_URL}/api/user/adduser`, {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(register)
+            });
+            const response = await result.json()
+            if (response) {
+                toast.success('Data Saved Successfuly', {
+                    position: "top-right",
+                    autoClose: 1000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                });
+                setTimeout(() => {
+                    navigate("/login")
+                }, 1500);
+                setRegister({ name: "", role: "", email: "", password: "" })
+                setCpassword("")
+            }
         }
     }
     return (
         <div className='w-full flex items-center justify-center'>
-
+            <ToastContainer
+                position="top-right"
+                autoClose={1000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+            />
             <div className='flex flex-col py-5  w-1/3  bg-green-900 rounded-xl my-10 shadow-2xl h-[550px]'>
                 <h1 className='text-3xl text-white font-bold'> Signup</h1>
 
