@@ -49,7 +49,7 @@ const Navbar1 = (props) => {
 
                     </div>
                     {cliked &&
-                        <div className='w-full h-[150px] absolute top-20 z-10 right-10 bg-gray-100 justify-center rounded-3xl flex items-start  flex-col'>
+                        <div className='w-full h-[100px] absolute bg-green-400 top-14 z-10 right-3  justify-center rounded-3xl flex items-start  flex-col'>
                             
                             <button onClick={handleLogout} className='flex mt-2 '>
                                 <BiLogOut size={20} className='mx-5 mt-1' />
