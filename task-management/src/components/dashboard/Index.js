@@ -17,7 +17,7 @@ const Index = () => {
         const result = await res.json()
         if(result){
             setLogged(result.user)
-            
+            console.log(result.user)
         }
     }
     

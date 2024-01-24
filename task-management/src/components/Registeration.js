@@ -78,8 +78,8 @@ const Registeration = () => {
                         <select className='focus:outline-none rounded-md w-full px-2 h-10' value={register.role} name='role' onChange={handleChange}  >
                             <option value={""}>Select Role</option>
 
-                            <option value={"manager"}>Manager</option>
-                            <option value={"user"}>User</option>
+                            <option value={"Manager"}>Manager</option>
+                            <option value={"User"}>User</option>
 
                         </select>
                     </div>

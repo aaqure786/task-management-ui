@@ -20,7 +20,18 @@ router.post("/add-permissions", async (req,res)=>{
         console.log(error.message)
     }
 });
-
+// route to get all roles
+router.get("/get-permission",fetchUser, async (req,res)=>{
+    try {
+        const perms = await Permission.find()
+        if(perms){
+            return res.status(200).json(perms)
+        }
+    } catch (error) {
+        console.log(error.message)
+        res.status(500).json({ error: error.message });
+    }
+})
  
 //route to edit permission
 router.put("/edit-permission/:role", fetchUser, async (req, res)=>{

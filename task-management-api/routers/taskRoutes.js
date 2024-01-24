@@ -24,6 +24,7 @@ router.get('/gettasks', fetchUser, async (req, res) => {
     try {
         const tasks = await Task.find()
         if (tasks) {
+            console.log(tasks)
             return res.status(200).json(tasks)
         }
     } catch (error) {
@@ -39,6 +40,7 @@ router.get('/gettask/:id', fetchUser, async (req, res) => {
         const task = await Task.findById({ _id: req.params.id })
         if (task) {
             return res.status(200).json(task)
+            
         }
     } catch (error) {
         console.log(error.message)

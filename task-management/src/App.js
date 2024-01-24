@@ -8,6 +8,8 @@ import AddorEditTasks from './components/dashboard/AddorEditTasks';
 import AllTasks from './components/dashboard/AllTasks';
 import Roles from './components/dashboard/Roles';
 import Registeration from './components/Registeration';
+import AllRoles from './components/dashboard/AllRoles';
+import AddorEditRoles from './components/dashboard/AddorEditRoles';
 function App() {
   return (
     <div className="App">
@@ -28,7 +30,11 @@ function App() {
           <Route path='/dashboard/tasks/edittask/:id' element={<AddorEditTasks />} />
 
           </Route>
-          <Route path='roles' element={<Roles />} />
+          <Route path='roles' element={<Roles />} >
+          <Route path='' element={<AllRoles />} />
+          <Route path='/dashboard/roles/edit-role/:role' element={<AddorEditRoles />} />
+
+          </Route>
 
 
 
